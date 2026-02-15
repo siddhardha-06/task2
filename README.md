@@ -42,7 +42,7 @@ Or open `main.html` directly in your browser (some features like folder auto-sav
 Below is an embedded snapshot placeholder (if you want a real screenshot, replace `output.png` with a real image file in the repo):
 
 
-![Output](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=)
+![Output](output.png)
 
 
 **Notes & Next steps**
