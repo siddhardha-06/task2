@@ -12,8 +12,19 @@ function renderTasks() {
         groups.get(key).push({task: t, index: idx});
     });
 
-    // sort keys: real dates ascending, then 'unscheduled' last
+    // compute uncompleted counts per group
+    const uncompletedCount = new Map();
+    groups.forEach((list, key) => {
+        const cnt = list.reduce((s, it) => s + (it.task && it.task.completed ? 0 : 1), 0);
+        uncompletedCount.set(key, cnt);
+    });
+
+    // sort keys: put groups with zero uncompleted tasks at the end; otherwise date ascending, with 'unscheduled' last
     const keys = Array.from(groups.keys()).sort((a,b) => {
+        const ca = uncompletedCount.get(a) || 0;
+        const cb = uncompletedCount.get(b) || 0;
+        if (ca === 0 && cb !== 0) return 1; // a after b
+        if (cb === 0 && ca !== 0) return -1; // a before b
         if (a === 'unscheduled') return 1;
         if (b === 'unscheduled') return -1;
         return new Date(a) - new Date(b);
@@ -54,7 +65,17 @@ function renderTasks() {
 
         headerLeft.appendChild(title);
         headerLi.appendChild(headerLeft);
-        headerLi.appendChild(input);
+        // right-side container for count and toggle so they stay together
+        const headerRight = document.createElement('div');
+        headerRight.className = 'date-header-right';
+        const countBadge = document.createElement('span');
+        countBadge.className = 'group-count';
+        const cnt = uncompletedCount.get(key) || 0;
+        countBadge.textContent = String(cnt);
+        if (cnt === 0) countBadge.classList.add('muted');
+        headerRight.appendChild(countBadge);
+        headerRight.appendChild(input);
+        headerLi.appendChild(headerRight);
 
         task_list.appendChild(headerLi);
 

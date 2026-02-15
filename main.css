@@ -143,6 +143,28 @@ ul#tasklist li{
 .group-list{ list-style:none; padding:0; margin:8px 0 0 0; }
 .group-list > li{ margin:6px 0; }
 
+/* group pending count badge */
+.group-count{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:30px;
+    height:30px;
+    padding:0 8px;
+    margin-right:8px; /* small gap between badge and toggle */
+    border-radius:8px;
+    background:#2563eb; /* blue */
+    color:#ffffff;
+    border:1px solid rgba(37,99,235,0.12);
+    font-weight:700;
+}
+.date-header-right{ display:flex; align-items:center; gap:4px; }
+.group-count.muted{
+    background:#f3f4f6;
+    color:#9ca3af;
+    border-color: rgba(0,0,0,0.03);
+}
+
 /* status button */
 .status-btn{
     display:inline-flex;

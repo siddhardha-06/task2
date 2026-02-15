@@ -1,0 +1,26 @@
+[
+  {
+    "text": "maths test",
+    "createdAt": "2026-02-15T14:12:41.903Z",
+    "dueDate": "2026-02-17T05:00:00.000Z",
+    "completed": true
+  },
+  {
+    "text": "Microprocessors Lab",
+    "createdAt": "2026-02-15T14:19:15.287Z",
+    "dueDate": "2026-02-17T07:45:00.000Z",
+    "completed": false
+  },
+  {
+    "text": "ML class",
+    "createdAt": "2026-02-15T14:13:24.831Z",
+    "dueDate": "2026-02-18T08:30:00.000Z",
+    "completed": false
+  },
+  {
+    "text": "ML workshop",
+    "createdAt": "2026-02-15T14:13:58.950Z",
+    "dueDate": "2026-02-21T03:30:00.000Z",
+    "completed": false
+  }
+]
