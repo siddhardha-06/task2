@@ -14,15 +14,7 @@ This is a small offline-capable To-Do List web app built with plain HTML/CSS/Jav
 
 **How to run (recommended)**
 
-Serve the project folder locally (so the app works reliably in the browser):
-
-```powershell
-# from the project folder
-python -m http.server 8000
-# then open http://localhost:8000/main.html in Chrome/Edge
-```
-
-Or open `main.html` directly in your browser (some features like folder auto-save were removed for cross-browser compatibility).
+open `main.html` directly in your browser.
 
 **Usage**
 
@@ -37,24 +29,5 @@ Or open `main.html` directly in your browser (some features like folder auto-sav
 - `main.css` — styles
 - `main.js` — app logic (tasks stored in `localStorage`)
 
-**Screenshot / Output**
-
-Below is an embedded snapshot placeholder (if you want a real screenshot, replace `output.png` with a real image file in the repo):
-
 
 ![Output](output.png)
-
-
-**Notes & Next steps**
-
-- The app persists to browser storage. For true filesystem auto-save you can wrap the app in Electron/Tauri or re-enable File System Access APIs (Chrome/Edge) if you serve via `localhost`.
-- If you want the `output.png` replaced by a real screenshot, save a screenshot as `output.png` in this folder and it will be used by GitHub or other renderers.
-
----
-
-If you'd like, I can:
-- Add a real screenshot file `output.png` to the repo (capture the UI and save it), or
-- Create a short demo GIF, or
-- Add a `README` section about development/architecture.
-
-Tell me what you'd prefer next.
