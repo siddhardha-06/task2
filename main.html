@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>TO-DO LIST</h1>
+    </header>
+</header>
+    <main class="container">
+        <section class="card">
+            <div class="controls">
+                <label for="newtask">Enter new task</label>
+                <div class="input-row">
+                    <input name="new_task" type="text" id="newtask" placeholder="What needs to be done?">
+                    <input type="datetime-local" id="duedate" class="duedate-input" aria-label="Due date (optional)">
+                    <button id="add" onclick="add_task()">Add</button>
+                </div>
+                <div class="secondary-actions">
+                    <button id="export" onclick="exportTasks()">Export</button>
+                    <button id="import" onclick="importTasks()">Import</button>
+                </div>
+            </div>
+
+            <ul id="tasklist" aria-live="polite"></ul>
+        </section>
+        <p class="hint">Tip: use Export/Import to save or load tasks across devices.</p>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
